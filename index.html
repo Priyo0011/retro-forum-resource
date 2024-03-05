@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>retro forum resource</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="font-mulish">
+    <header class="container mx-auto mt-8 ">
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="navbar-end gap-8">
+                <div class="tooltip-container">
+                    <button class="btn rounded-full"> <img src="images/home.png" alt=""></button>
+                    <span class="tooltip-text">Home</span>
+                </div>
+                <div class="tooltip-container">
+                    <button class="btn rounded-full"> <img src="images/edit.png" alt=""></button>
+                    <span class="tooltip-text">Edit</span>
+                </div>
+                <div class="tooltip-container">
+                    <button class="btn rounded-full"> <img src="images/add.png" alt=""></button>
+                    <span class="tooltip-text">Add</span>
+                </div>
+                <div class="tooltip-container">
+                    <button class="btn rounded-full"> <img src="images/flag.png" alt=""></button>
+                    <span class="tooltip-text">Flag</span>
+                </div>
+                <a class="btn rounded-full bg-[#797DFC] text-white text-xl font-extrabold px-10">Sign In</a>
+            </div>
+        </div>
+        <div></div>
+    </header>
+    <main class="container mx-auto">
+        <section class="mt-10">
+            <div class="h-[555px] bg-[#12132D] rounded-3xl">
+                <div class="flex justify-between p-28">
+                    <div>
+                        <h1 class="text-7xl font-black text-white p-4">Welcome to the <br> <span
+                                class="text-sky-600">ReTro</span> Forum</h1>
+                        <p class="text-2xl text-white p-5 mb-4">Share your favorite opinion and win and wp forum coffee
+                            mug!</p>
+                        <label class="input input-bordered flex items-center rounded-full">
+                            <input id="search-field" type="text" class="grow" placeholder="Search" />
+                            <span onclick="handleSearch()"
+                                class="btn rounded-full bg-[#797DFC] text-white text-xl font-extrabold px-10">Search</span>
+                        </label>
+                    </div>
+                    <div>
+                        <div class="bg-white rounded-3xl mt-12">
+                            <div class="flex justify-between gap-10 p-14">
+                                <div>
+                                    <p class="text-2xl font-semibold text-black">Registered Users</p>
+                                    <p class="text-2xl font-semibold text-black">Forum</p>
+                                    <p class="text-2xl font-semibold text-black">Topics</p>
+                                    <p class="text-2xl font-semibold text-black">Replies</p>
+                                </div>
+                                <div>
+                                    <p class="text-2xl font-semibold text-black">01</p>
+                                    <p class="text-2xl font-semibold text-black">05</p>
+                                    <p class="text-2xl font-semibold text-black">01</p>
+                                    <p class="text-2xl font-semibold text-black">01</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container mx-auto">
+            <div class="text-center mt-16">
+                <h1 class="text-5xl font-bold mb-8">Let’s Discuss</h1>
+                <p class="text-xl mb-20">Yes, you can run unit tests and view the results directly within the app. <br>
+                    The integrated testing
+                    features allow for a streamlined .</p>
+            </div>
+            <div id="loading-spinner" class="text-center my-32 hidden">
+                <span class="loading loading-dots loading-lg"></span>
+            </div>
+            <div class="flex justify-between">
+                <div id="post-container">
+                </div>
+                <div>
+                    <div class="bg-gray-100 rounded-3xl p-4 ">
+                        <div class="flex justify-between gap-10">
+                            <div>
+                                <h1 class="text-2xl font-bold">Title</h1>
+                            </div>
+                            <div class="flex gap-2">
+                                <div><img src="images/Frame (6).png" alt=""></div>
+                                <p>Mark asread</p>
+                                <p id="readCount">(0)</p>
+                            </div>
+                        </div>
+                        <div id="postDetails" class="bg-white rounded-3xl mt-12 w-[480px]">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-20">
+            <div class="bg-[#12132D] rounded-3xl">
+                <div class="flex justify-between p-28">
+                    <div>
+                        <h1 class="text-7xl font-black text-white p-4 mt-9">Join Our Forum</h1>
+                        <p class="text-2xl text-white p-5 mb-4">Share your favorite opinion and win and wp forum coffee
+                            mug!</p>
+                        <button
+                            class="btn rounded-full bg-[#797DFC] text-white text-xl font-extrabold px-10 border-none">Registered
+                            Now</button>
+                    </div>
+                    <div>
+                        <img src="images/joinforum.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="text-center mt-16">
+                <h1 class="text-5xl font-bold mb-8">Latest Posts</h1>
+                <p class="text-xl mb-20">Yes, you can run unit tests and view the results directly within the app. <br>
+                    The integrated testing
+                    features allow for a streamlined .</p>
+            </div>
+            <div>
+                <div id="post-container2" class="grid grid-cols-3 gap-8">
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer footer-center p-10 bg-gray-200 mt-20">
+        <aside class="mt-10">
+            <img src="images/logo.png" alt="">
+            <p class="text-xl mt-4">Contrary to popular belief, Lorem Ipsum is not simply random text. <br> It has roots
+                in a piece of classical Latin literature from 45 BC</p>
+        </aside>
+        <nav>
+            <img src="images/Social.png" alt="">
+            <p class="text-lg mt-16">Copyright © 2017, All Rights Reserved.</p>
+        </nav>
+    </footer>
+    <script src="script/retro.js"></script>
+</body>
+
+</html>
